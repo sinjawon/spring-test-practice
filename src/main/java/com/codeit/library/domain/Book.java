@@ -41,6 +41,19 @@ public class Book {
         this.price = price;
     }
 
+    public Book(Long id, String title, String author, String isbn, Integer price) {
+        validateTitle(title);
+        validateAuthor(author);
+        validatePrice(price);
+
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.price = price;
+    }
+
+
     public Book(String title, String author, String isbn, Integer price, LocalDate publishedDate) {
         this(title, author, isbn, price);
         this.publishedDate = publishedDate;
